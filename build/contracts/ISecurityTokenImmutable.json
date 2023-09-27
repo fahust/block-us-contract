@@ -1,0 +1,2512 @@
+{
+  "contractName": "ISecurityTokenImmutable",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_addressProxy",
+          "type": "address"
+        }
+      ],
+      "name": "setAddressProxy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAddressProxy",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "startFundraising",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "endFundraising",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxSupply",
+          "type": "uint256"
+        }
+      ],
+      "name": "setFundraising",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "pausable",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "rulesModifiable",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "voteToWithdraw",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "dayToWithdraw",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "startFundraising",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "endFundraising",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxSupply",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct TokenLibrary.Rules",
+          "name": "_rules",
+          "type": "tuple"
+        }
+      ],
+      "name": "setRules",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRules",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "pausable",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "rulesModifiable",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "voteToWithdraw",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "dayToWithdraw",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "startFundraising",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "endFundraising",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxSupply",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct TokenLibrary.Rules",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "skip",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "limit",
+          "type": "uint32"
+        }
+      ],
+      "name": "transfers",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "transferType",
+              "type": "string"
+            },
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "date",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct TokenLibrary.Transfer[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "refoundable",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_paused",
+          "type": "uint256"
+        }
+      ],
+      "name": "pause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "unpause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isPaused",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "senderAddress",
+          "type": "address"
+        }
+      ],
+      "name": "handlePayment",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "injectCapital",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"refoundable\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAddressProxy\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRules\",\"outputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"pausable\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"rulesModifiable\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"voteToWithdraw\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"dayToWithdraw\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"startFundraising\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"endFundraising\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxSupply\",\"type\":\"uint256\"}],\"internalType\":\"struct TokenLibrary.Rules\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"senderAddress\",\"type\":\"address\"}],\"name\":\"handlePayment\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"injectCapital\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isPaused\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_paused\",\"type\":\"uint256\"}],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_addressProxy\",\"type\":\"address\"}],\"name\":\"setAddressProxy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"startFundraising\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"endFundraising\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxSupply\",\"type\":\"uint256\"}],\"name\":\"setFundraising\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"pausable\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"rulesModifiable\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"voteToWithdraw\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"dayToWithdraw\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"startFundraising\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"endFundraising\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxSupply\",\"type\":\"uint256\"}],\"internalType\":\"struct TokenLibrary.Rules\",\"name\":\"_rules\",\"type\":\"tuple\"}],\"name\":\"setRules\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"skip\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"limit\",\"type\":\"uint32\"}],\"name\":\"transfers\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"transferType\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"date\",\"type\":\"uint256\"}],\"internalType\":\"struct TokenLibrary.Transfer[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"}],\"name\":\"withdraw\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"burn(address,uint256,uint256)\":{\"params\":{\"account\":\"{address} wallet to burn the token\",\"amount\":\"{uint256} amount to burn\"}},\"getAddressProxy()\":{\"returns\":{\"_0\":\"addressProxy {address} address of contract proxy\"}},\"getRules()\":{\"returns\":{\"_0\":\"rules {TokenLibrary.Rules} struct of rules setted on smart contract\"}},\"handlePayment(address)\":{\"params\":{\"senderAddress\":\"{address} address of sender\"}},\"mint(address,uint256)\":{\"params\":{\"amount\":\"{uint256} amount to mint\",\"to\":\"{address} wallet to send the token\"},\"returns\":{\"_0\":\"result {boolean} success or failure\"}},\"owner()\":{\"returns\":{\"_0\":\"owner {address} wallet addres from owner\"}},\"pause(uint256)\":{\"params\":{\"_paused\":\"{uint256} represents date when transfer restart\"}},\"setAddressProxy(address)\":{\"params\":{\"_addressProxy\":\"{address} address of contract proxy\"}},\"setFundraising(uint256,uint256,uint256)\":{\"params\":{\"endFundraising\":\"{uint256} end timestamp of the fundraising\",\"maxSupply\":\"{uint256} max supply tokens of contract\",\"startFundraising\":\"{uint256} start timestamp of the fundraising\"}},\"setRules((bool,bool,bool,uint256,uint256,uint256,uint256))\":{\"params\":{\"_rules\":\"{TokenLibrary.Rules} struct of rules\"}},\"transfer(address,uint256)\":{\"details\":\"Transfer and send `amount` tokens from `_msgSender()` to `to` Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\",\"params\":{\"amount\":\"{uint256[]} amount to transfer\",\"to\":\"{address} wallet to transfer the token\"}},\"transferFrom(address,address,uint256)\":{\"details\":\"Transfer and send `amount` tokens from `from` to `to` Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\",\"params\":{\"amount\":\"{uint256[]} amount to transfer\",\"from\":\"{address} wallet from transfer the token\",\"to\":\"{address} wallet to transfer the token\"}},\"transferOwnership(address)\":{\"params\":{\"account\":\"{address} address of the new owner\"}},\"transfers(uint32,uint32)\":{\"returns\":{\"_0\":\"result {TokenLibrary.Transfer[]} array of register transfers movements\"}},\"version()\":{\"returns\":{\"_0\":\"TOKEN_VERSION {string} version of the smart contract\"}},\"withdraw(uint256,address)\":{\"params\":{\"amount\":\"{uint256} the number of tokens transferred\",\"receiver\":\"{address} the recipient of the token transfer\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"balanceOf(address)\":{\"notice\":\"Returns the amount of tokens owned by `account`.\"},\"burn(address,uint256,uint256)\":{\"notice\":\"Remove `amount` tokens from `account` Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\"},\"getAddressProxy()\":{\"notice\":\"Get address of proxy contract\"},\"getRules()\":{\"notice\":\"Get parameters rules of contract\"},\"handlePayment(address)\":{\"notice\":\"handle payment receive by everyone, everywhere, all at once\"},\"injectCapital()\":{\"notice\":\"Inject wei into smart contract\"},\"isPaused()\":{\"notice\":\"Check if contract is paused or not\"},\"mint(address,uint256)\":{\"notice\":\"Mint and send `amount` tokens to `to` Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\"},\"owner()\":{\"notice\":\"Returns the address wallet of the smart contract owner.\"},\"pause(uint256)\":{\"notice\":\"Pause transfer tokens of smart contract\"},\"setAddressProxy(address)\":{\"notice\":\"Set address of proxy contract to accept only proxy requests\"},\"setFundraising(uint256,uint256,uint256)\":{\"notice\":\"Set fundraising parameters to mint tokens in conditions\"},\"setRules((bool,bool,bool,uint256,uint256,uint256,uint256))\":{\"notice\":\"Set parameters rules of contract only if at start rules is setted modifiable\"},\"totalSupply()\":{\"notice\":\"Returns the amount of tokens in existence.\"},\"transferOwnership(address)\":{\"notice\":\"Transfer ownership of the smart contract\"},\"transfers(uint32,uint32)\":{\"notice\":\"Get movements of the assets\"},\"unpause()\":{\"notice\":\"Unpause transfer tokens of smart contract\"},\"version()\":{\"notice\":\"Returns the version of the token contract\"},\"withdraw(uint256,address)\":{\"notice\":\"Withdraw tokens amount of contract balance\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ISecurityTokenImmutable.sol\":\"ISecurityTokenImmutable\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ISecurityTokenImmutable.sol\":{\"keccak256\":\"0x1443149f3603e0a532f159903d165c6d0c57068aa7fac4e75a4e3c8a1771e561\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be4e02dbd6ace2b94733aa93a006af146538e614f6c92d8457c6e6e3af00d11c\",\"dweb:/ipfs/QmNUfLPJQDRisXzXg4YqhPg8ktXvLCWugM63Kt3KGRjVAn\"]},\"project:/contracts/library/TokenLibrary.sol\":{\"keccak256\":\"0x0b3c8bb3f47a2633f7de4a6ef66dc17a7cb19a854c628d075af026efde35dfac\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f0e50a9d8f5c2da391fbf215d9b0477badc2fac31cbd6dc2fe286f749ff60ee3\",\"dweb:/ipfs/QmauC3kHBXHBfjW2QY2hsw7YhUsuytQGMM4Bf5gR7bjVqc\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\n\nimport \"../library/TokenLibrary.sol\";\n\ninterface ISecurityTokenImmutable {\n\n    /**\n     * @notice Set address of proxy contract to accept only proxy requests\n     * @param _addressProxy {address} address of contract proxy\n     */\n    function setAddressProxy(address _addressProxy) external;\n\n    /**\n     * @notice Get address of proxy contract\n     * @return addressProxy {address} address of contract proxy\n     */\n    function getAddressProxy() external view returns(address);\n\n    /**\n     * @notice Set fundraising parameters to mint tokens in conditions\n     * @param startFundraising {uint256} start timestamp of the fundraising\n     * @param endFundraising {uint256} end timestamp of the fundraising\n     * @param maxSupply {uint256} max supply tokens of contract\n     */\n    function setFundraising(\n        uint256 startFundraising,\n        uint256 endFundraising,\n        uint256 maxSupply\n    ) external;\n\n    /**\n     * @notice Set parameters rules of contract only if at start rules is setted modifiable\n     * @param _rules {TokenLibrary.Rules} struct of rules\n     */\n    function setRules(TokenLibrary.Rules memory _rules) external;\n\n    /**\n     * @notice Get parameters rules of contract\n     * @return rules {TokenLibrary.Rules} struct of rules setted on smart contract\n     */\n    function getRules() external view returns(TokenLibrary.Rules memory);\n\n    /**\n     * @notice Returns the version of the token contract\n     * @return TOKEN_VERSION {string} version of the smart contract\n     */\n    function version() external pure returns (string memory);\n\n    /**\n     * @notice Returns the address wallet of the smart contract owner.\n     * @return owner {address} wallet addres from owner\n     */\n    function owner() external view returns (address);\n\n    /**\n     * @notice Get movements of the assets\n     * @return result {TokenLibrary.Transfer[]} array of register transfers movements\n     */\n    function transfers(uint32 skip, uint32 limit) external view returns (TokenLibrary.Transfer[] memory);\n\n    /**\n     * @notice Transfer ownership of the smart contract\n     * @param account {address} address of the new owner\n     */\n    function transferOwnership(address account) external;\n\n    /**\n     * @notice Mint and send `amount` tokens to `to`\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     * @param to {address} wallet to send the token\n     * @param amount {uint256} amount to mint\n     * @return result {boolean} success or failure\n     */\n    function mint(address to, uint256 amount) external payable returns (bool);\n\n    /**\n     * @notice Remove `amount` tokens from `account`\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     * @param account {address} wallet to burn the token\n     * @param amount {uint256} amount to burn\n     */\n    function burn(address account, uint256 amount, uint256 refoundable) external returns (bool);\n\n    /**\n     * @dev Transfer and send `amount` tokens from `_msgSender()` to `to`\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     * @param to {address} wallet to transfer the token\n     * @param amount {uint256[]} amount to transfer\n     */\n    function transfer(address to, uint256 amount) external returns (bool);\n\n    /**\n     * @dev Transfer and send `amount` tokens from `from` to `to`\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     * @param from {address} wallet from transfer the token\n     * @param to {address} wallet to transfer the token\n     * @param amount {uint256[]} amount to transfer\n     */\n    function transferFrom(address from, address to, uint256 amount) external returns (bool);\n\n\n    /**\n     *  @notice Pause transfer tokens of smart contract\n     *  @param _paused {uint256} represents date when transfer restart\n     */\n    function pause(uint256 _paused) external;\n\n    /**\n     *  @notice Unpause transfer tokens of smart contract\n     */\n    function unpause() external;\n\n    /**\n     *  @notice Check if contract is paused or not\n     */\n    function isPaused() external view returns(uint256);\n\n    /**\n     * @notice Withdraw tokens amount of contract balance\n     * @param amount {uint256} the number of tokens transferred\n     * @param receiver {address} the recipient of the token transfer\n     */\n    function withdraw(uint256 amount, address receiver) external returns(bool);\n\n    /**\n     * @notice handle payment receive by everyone, everywhere, all at once\n     * @param senderAddress {address} address of sender\n     */\n    function handlePayment(address senderAddress)external payable returns(bool);\n\n    /**\n     * @notice Inject wei into smart contract\n     */\n    function injectCapital() external payable returns(bool);\n\n    /**\n     * @notice Returns the amount of tokens in existence.\n     */\n    function totalSupply() external view returns (uint256);\n\n    /**\n     * @notice Returns the amount of tokens owned by `account`.\n     */\n    function balanceOf(address account) external view returns (uint256);\n\n}\n",
+  "sourcePath": "/home/solid-solution/Documents/block-us/block-us-contract/contracts/interfaces/ISecurityTokenImmutable.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ISecurityTokenImmutable.sol",
+    "exportedSymbols": {
+      "ISecurityTokenImmutable": [
+        2454
+      ],
+      "TokenLibrary": [
+        2483
+      ]
+    },
+    "id": 2455,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2288,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:10"
+      },
+      {
+        "absolutePath": "project:/contracts/library/TokenLibrary.sol",
+        "file": "../library/TokenLibrary.sol",
+        "id": 2289,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 2455,
+        "sourceUnit": 2484,
+        "src": "59:37:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISecurityTokenImmutable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2454,
+        "linearizedBaseContracts": [
+          2454
+        ],
+        "name": "ISecurityTokenImmutable",
+        "nameLocation": "108:23:10",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 2290,
+              "nodeType": "StructuredDocumentation",
+              "src": "139:150:10",
+              "text": " @notice Set address of proxy contract to accept only proxy requests\n @param _addressProxy {address} address of contract proxy"
+            },
+            "functionSelector": "ff18889c",
+            "id": 2295,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setAddressProxy",
+            "nameLocation": "303:15:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2293,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2292,
+                  "mutability": "mutable",
+                  "name": "_addressProxy",
+                  "nameLocation": "327:13:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2295,
+                  "src": "319:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2291,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "319:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "318:23:10"
+            },
+            "returnParameters": {
+              "id": 2294,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "350:0:10"
+            },
+            "scope": 2454,
+            "src": "294:57:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2296,
+              "nodeType": "StructuredDocumentation",
+              "src": "357:120:10",
+              "text": " @notice Get address of proxy contract\n @return addressProxy {address} address of contract proxy"
+            },
+            "functionSelector": "cd0aa36d",
+            "id": 2301,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAddressProxy",
+            "nameLocation": "491:15:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2297,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "506:2:10"
+            },
+            "returnParameters": {
+              "id": 2300,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2299,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2301,
+                  "src": "531:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2298,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "531:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "530:9:10"
+            },
+            "scope": 2454,
+            "src": "482:58:10",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2302,
+              "nodeType": "StructuredDocumentation",
+              "src": "546:294:10",
+              "text": " @notice Set fundraising parameters to mint tokens in conditions\n @param startFundraising {uint256} start timestamp of the fundraising\n @param endFundraising {uint256} end timestamp of the fundraising\n @param maxSupply {uint256} max supply tokens of contract"
+            },
+            "functionSelector": "2a87e1d2",
+            "id": 2311,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setFundraising",
+            "nameLocation": "854:14:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2309,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2304,
+                  "mutability": "mutable",
+                  "name": "startFundraising",
+                  "nameLocation": "886:16:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2311,
+                  "src": "878:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2303,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "878:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2306,
+                  "mutability": "mutable",
+                  "name": "endFundraising",
+                  "nameLocation": "920:14:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2311,
+                  "src": "912:22:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2305,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "912:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2308,
+                  "mutability": "mutable",
+                  "name": "maxSupply",
+                  "nameLocation": "952:9:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2311,
+                  "src": "944:17:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2307,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "944:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "868:99:10"
+            },
+            "returnParameters": {
+              "id": 2310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "976:0:10"
+            },
+            "scope": 2454,
+            "src": "845:132:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2312,
+              "nodeType": "StructuredDocumentation",
+              "src": "983:161:10",
+              "text": " @notice Set parameters rules of contract only if at start rules is setted modifiable\n @param _rules {TokenLibrary.Rules} struct of rules"
+            },
+            "functionSelector": "99de43a2",
+            "id": 2318,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRules",
+            "nameLocation": "1158:8:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2316,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2315,
+                  "mutability": "mutable",
+                  "name": "_rules",
+                  "nameLocation": "1193:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2318,
+                  "src": "1167:32:10",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Rules_$2482_memory_ptr",
+                    "typeString": "struct TokenLibrary.Rules"
+                  },
+                  "typeName": {
+                    "id": 2314,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2313,
+                      "name": "TokenLibrary.Rules",
+                      "nameLocations": [
+                        "1167:12:10",
+                        "1180:5:10"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2482,
+                      "src": "1167:18:10"
+                    },
+                    "referencedDeclaration": 2482,
+                    "src": "1167:18:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Rules_$2482_storage_ptr",
+                      "typeString": "struct TokenLibrary.Rules"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1166:34:10"
+            },
+            "returnParameters": {
+              "id": 2317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1209:0:10"
+            },
+            "scope": 2454,
+            "src": "1149:61:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2319,
+              "nodeType": "StructuredDocumentation",
+              "src": "1216:142:10",
+              "text": " @notice Get parameters rules of contract\n @return rules {TokenLibrary.Rules} struct of rules setted on smart contract"
+            },
+            "functionSelector": "45e2984a",
+            "id": 2325,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRules",
+            "nameLocation": "1372:8:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2320,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1380:2:10"
+            },
+            "returnParameters": {
+              "id": 2324,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2323,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2325,
+                  "src": "1405:25:10",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Rules_$2482_memory_ptr",
+                    "typeString": "struct TokenLibrary.Rules"
+                  },
+                  "typeName": {
+                    "id": 2322,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2321,
+                      "name": "TokenLibrary.Rules",
+                      "nameLocations": [
+                        "1405:12:10",
+                        "1418:5:10"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2482,
+                      "src": "1405:18:10"
+                    },
+                    "referencedDeclaration": 2482,
+                    "src": "1405:18:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Rules_$2482_storage_ptr",
+                      "typeString": "struct TokenLibrary.Rules"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1404:27:10"
+            },
+            "scope": 2454,
+            "src": "1363:69:10",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2326,
+              "nodeType": "StructuredDocumentation",
+              "src": "1438:136:10",
+              "text": " @notice Returns the version of the token contract\n @return TOKEN_VERSION {string} version of the smart contract"
+            },
+            "functionSelector": "54fd4d50",
+            "id": 2331,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "version",
+            "nameLocation": "1588:7:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2327,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1595:2:10"
+            },
+            "returnParameters": {
+              "id": 2330,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2329,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2331,
+                  "src": "1621:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2328,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1621:6:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1620:15:10"
+            },
+            "scope": 2454,
+            "src": "1579:57:10",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2332,
+              "nodeType": "StructuredDocumentation",
+              "src": "1642:138:10",
+              "text": " @notice Returns the address wallet of the smart contract owner.\n @return owner {address} wallet addres from owner"
+            },
+            "functionSelector": "8da5cb5b",
+            "id": 2337,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "owner",
+            "nameLocation": "1794:5:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2333,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1799:2:10"
+            },
+            "returnParameters": {
+              "id": 2336,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2335,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2337,
+                  "src": "1825:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2334,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1825:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1824:9:10"
+            },
+            "scope": 2454,
+            "src": "1785:49:10",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2338,
+              "nodeType": "StructuredDocumentation",
+              "src": "1840:140:10",
+              "text": " @notice Get movements of the assets\n @return result {TokenLibrary.Transfer[]} array of register transfers movements"
+            },
+            "functionSelector": "6c9c1cc1",
+            "id": 2349,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transfers",
+            "nameLocation": "1994:9:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2343,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2340,
+                  "mutability": "mutable",
+                  "name": "skip",
+                  "nameLocation": "2011:4:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2349,
+                  "src": "2004:11:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 2339,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2004:6:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2342,
+                  "mutability": "mutable",
+                  "name": "limit",
+                  "nameLocation": "2024:5:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2349,
+                  "src": "2017:12:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 2341,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2017:6:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2003:27:10"
+            },
+            "returnParameters": {
+              "id": 2348,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2347,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2349,
+                  "src": "2054:30:10",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Transfer_$2467_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct TokenLibrary.Transfer[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2345,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 2344,
+                        "name": "TokenLibrary.Transfer",
+                        "nameLocations": [
+                          "2054:12:10",
+                          "2067:8:10"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 2467,
+                        "src": "2054:21:10"
+                      },
+                      "referencedDeclaration": 2467,
+                      "src": "2054:21:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transfer_$2467_storage_ptr",
+                        "typeString": "struct TokenLibrary.Transfer"
+                      }
+                    },
+                    "id": 2346,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2054:23:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Transfer_$2467_storage_$dyn_storage_ptr",
+                      "typeString": "struct TokenLibrary.Transfer[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2053:32:10"
+            },
+            "scope": 2454,
+            "src": "1985:101:10",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2350,
+              "nodeType": "StructuredDocumentation",
+              "src": "2092:124:10",
+              "text": " @notice Transfer ownership of the smart contract\n @param account {address} address of the new owner"
+            },
+            "functionSelector": "f2fde38b",
+            "id": 2355,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferOwnership",
+            "nameLocation": "2230:17:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2353,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2352,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "2256:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2355,
+                  "src": "2248:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2351,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2248:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2247:17:10"
+            },
+            "returnParameters": {
+              "id": 2354,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2273:0:10"
+            },
+            "scope": 2454,
+            "src": "2221:53:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2356,
+              "nodeType": "StructuredDocumentation",
+              "src": "2280:335:10",
+              "text": " @notice Mint and send `amount` tokens to `to`\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event.\n @param to {address} wallet to send the token\n @param amount {uint256} amount to mint\n @return result {boolean} success or failure"
+            },
+            "functionSelector": "40c10f19",
+            "id": 2365,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "2629:4:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2361,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2358,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "2642:2:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2365,
+                  "src": "2634:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2357,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2634:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2360,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2654:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2365,
+                  "src": "2646:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2359,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2646:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2633:28:10"
+            },
+            "returnParameters": {
+              "id": 2364,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2363,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2365,
+                  "src": "2688:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2362,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2688:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2687:6:10"
+            },
+            "scope": 2454,
+            "src": "2620:74:10",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2366,
+              "nodeType": "StructuredDocumentation",
+              "src": "2700:289:10",
+              "text": " @notice Remove `amount` tokens from `account`\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event.\n @param account {address} wallet to burn the token\n @param amount {uint256} amount to burn"
+            },
+            "functionSelector": "f5298aca",
+            "id": 2377,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "3003:4:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2373,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2368,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "3016:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2377,
+                  "src": "3008:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2367,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3008:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2370,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "3033:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2377,
+                  "src": "3025:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2369,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3025:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2372,
+                  "mutability": "mutable",
+                  "name": "refoundable",
+                  "nameLocation": "3049:11:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2377,
+                  "src": "3041:19:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2371,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3041:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3007:54:10"
+            },
+            "returnParameters": {
+              "id": 2376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2375,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2377,
+                  "src": "3080:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2374,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3080:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3079:6:10"
+            },
+            "scope": 2454,
+            "src": "2994:92:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2378,
+              "nodeType": "StructuredDocumentation",
+              "src": "3092:315:10",
+              "text": " @dev Transfer and send `amount` tokens from `_msgSender()` to `to`\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event.\n @param to {address} wallet to transfer the token\n @param amount {uint256[]} amount to transfer"
+            },
+            "functionSelector": "a9059cbb",
+            "id": 2387,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transfer",
+            "nameLocation": "3421:8:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2380,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "3438:2:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2387,
+                  "src": "3430:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2379,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3430:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2382,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "3450:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2387,
+                  "src": "3442:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2381,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3442:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3429:28:10"
+            },
+            "returnParameters": {
+              "id": 2386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2385,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2387,
+                  "src": "3476:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2384,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3476:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3475:6:10"
+            },
+            "scope": 2454,
+            "src": "3412:70:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2388,
+              "nodeType": "StructuredDocumentation",
+              "src": "3488:367:10",
+              "text": " @dev Transfer and send `amount` tokens from `from` to `to`\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event.\n @param from {address} wallet from transfer the token\n @param to {address} wallet to transfer the token\n @param amount {uint256[]} amount to transfer"
+            },
+            "functionSelector": "23b872dd",
+            "id": 2399,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferFrom",
+            "nameLocation": "3869:12:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2395,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2390,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "3890:4:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2399,
+                  "src": "3882:12:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2389,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3882:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2392,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "3904:2:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2399,
+                  "src": "3896:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2391,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3896:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2394,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "3916:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2399,
+                  "src": "3908:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2393,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3908:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3881:42:10"
+            },
+            "returnParameters": {
+              "id": 2398,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2397,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2399,
+                  "src": "3942:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2396,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3942:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3941:6:10"
+            },
+            "scope": 2454,
+            "src": "3860:88:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2400,
+              "nodeType": "StructuredDocumentation",
+              "src": "3955:138:10",
+              "text": "  @notice Pause transfer tokens of smart contract\n  @param _paused {uint256} represents date when transfer restart"
+            },
+            "functionSelector": "136439dd",
+            "id": 2405,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pause",
+            "nameLocation": "4107:5:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2403,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2402,
+                  "mutability": "mutable",
+                  "name": "_paused",
+                  "nameLocation": "4121:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2405,
+                  "src": "4113:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2401,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4113:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4112:17:10"
+            },
+            "returnParameters": {
+              "id": 2404,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4138:0:10"
+            },
+            "scope": 2454,
+            "src": "4098:41:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2406,
+              "nodeType": "StructuredDocumentation",
+              "src": "4145:69:10",
+              "text": "  @notice Unpause transfer tokens of smart contract"
+            },
+            "functionSelector": "3f4ba83a",
+            "id": 2409,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unpause",
+            "nameLocation": "4228:7:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2407,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4235:2:10"
+            },
+            "returnParameters": {
+              "id": 2408,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4246:0:10"
+            },
+            "scope": 2454,
+            "src": "4219:28:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2410,
+              "nodeType": "StructuredDocumentation",
+              "src": "4253:62:10",
+              "text": "  @notice Check if contract is paused or not"
+            },
+            "functionSelector": "b187bd26",
+            "id": 2415,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isPaused",
+            "nameLocation": "4329:8:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2411,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4337:2:10"
+            },
+            "returnParameters": {
+              "id": 2414,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2413,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2415,
+                  "src": "4362:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2412,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4362:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4361:9:10"
+            },
+            "scope": 2454,
+            "src": "4320:51:10",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2416,
+              "nodeType": "StructuredDocumentation",
+              "src": "4377:202:10",
+              "text": " @notice Withdraw tokens amount of contract balance\n @param amount {uint256} the number of tokens transferred\n @param receiver {address} the recipient of the token transfer"
+            },
+            "functionSelector": "00f714ce",
+            "id": 2425,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "4593:8:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2421,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2418,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "4610:6:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2425,
+                  "src": "4602:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2417,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4602:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2420,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "4626:8:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2425,
+                  "src": "4618:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2419,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4618:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4601:34:10"
+            },
+            "returnParameters": {
+              "id": 2424,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2423,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2425,
+                  "src": "4653:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2422,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4653:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4652:6:10"
+            },
+            "scope": 2454,
+            "src": "4584:75:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2426,
+              "nodeType": "StructuredDocumentation",
+              "src": "4665:142:10",
+              "text": " @notice handle payment receive by everyone, everywhere, all at once\n @param senderAddress {address} address of sender"
+            },
+            "functionSelector": "41bb26d3",
+            "id": 2433,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "handlePayment",
+            "nameLocation": "4821:13:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2429,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2428,
+                  "mutability": "mutable",
+                  "name": "senderAddress",
+                  "nameLocation": "4843:13:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2433,
+                  "src": "4835:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2427,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4835:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4834:23:10"
+            },
+            "returnParameters": {
+              "id": 2432,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2431,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2433,
+                  "src": "4882:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2430,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4882:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4881:6:10"
+            },
+            "scope": 2454,
+            "src": "4812:76:10",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2434,
+              "nodeType": "StructuredDocumentation",
+              "src": "4894:57:10",
+              "text": " @notice Inject wei into smart contract"
+            },
+            "functionSelector": "f3c7b6a7",
+            "id": 2439,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "injectCapital",
+            "nameLocation": "4965:13:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2435,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4978:2:10"
+            },
+            "returnParameters": {
+              "id": 2438,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2437,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2439,
+                  "src": "5006:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2436,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5006:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5005:6:10"
+            },
+            "scope": 2454,
+            "src": "4956:56:10",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2440,
+              "nodeType": "StructuredDocumentation",
+              "src": "5018:69:10",
+              "text": " @notice Returns the amount of tokens in existence."
+            },
+            "functionSelector": "18160ddd",
+            "id": 2445,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalSupply",
+            "nameLocation": "5101:11:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2441,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5112:2:10"
+            },
+            "returnParameters": {
+              "id": 2444,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2443,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2445,
+                  "src": "5138:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2442,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5138:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5137:9:10"
+            },
+            "scope": 2454,
+            "src": "5092:55:10",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 2446,
+              "nodeType": "StructuredDocumentation",
+              "src": "5153:75:10",
+              "text": " @notice Returns the amount of tokens owned by `account`."
+            },
+            "functionSelector": "70a08231",
+            "id": 2453,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nameLocation": "5242:9:10",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2449,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2448,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "5260:7:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2453,
+                  "src": "5252:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2447,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5252:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5251:17:10"
+            },
+            "returnParameters": {
+              "id": 2452,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2451,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2453,
+                  "src": "5292:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2450,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5292:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5291:9:10"
+            },
+            "scope": 2454,
+            "src": "5233:68:10",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2455,
+        "src": "98:5206:10",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "33:5272:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.21+commit.d9974bed.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.10",
+  "updatedAt": "2023-09-19T15:20:09.578Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "burn(address,uint256,uint256)": {
+        "params": {
+          "account": "{address} wallet to burn the token",
+          "amount": "{uint256} amount to burn"
+        }
+      },
+      "getAddressProxy()": {
+        "returns": {
+          "_0": "addressProxy {address} address of contract proxy"
+        }
+      },
+      "getRules()": {
+        "returns": {
+          "_0": "rules {TokenLibrary.Rules} struct of rules setted on smart contract"
+        }
+      },
+      "handlePayment(address)": {
+        "params": {
+          "senderAddress": "{address} address of sender"
+        }
+      },
+      "mint(address,uint256)": {
+        "params": {
+          "amount": "{uint256} amount to mint",
+          "to": "{address} wallet to send the token"
+        },
+        "returns": {
+          "_0": "result {boolean} success or failure"
+        }
+      },
+      "owner()": {
+        "returns": {
+          "_0": "owner {address} wallet addres from owner"
+        }
+      },
+      "pause(uint256)": {
+        "params": {
+          "_paused": "{uint256} represents date when transfer restart"
+        }
+      },
+      "setAddressProxy(address)": {
+        "params": {
+          "_addressProxy": "{address} address of contract proxy"
+        }
+      },
+      "setFundraising(uint256,uint256,uint256)": {
+        "params": {
+          "endFundraising": "{uint256} end timestamp of the fundraising",
+          "maxSupply": "{uint256} max supply tokens of contract",
+          "startFundraising": "{uint256} start timestamp of the fundraising"
+        }
+      },
+      "setRules((bool,bool,bool,uint256,uint256,uint256,uint256))": {
+        "params": {
+          "_rules": "{TokenLibrary.Rules} struct of rules"
+        }
+      },
+      "transfer(address,uint256)": {
+        "details": "Transfer and send `amount` tokens from `_msgSender()` to `to` Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.",
+        "params": {
+          "amount": "{uint256[]} amount to transfer",
+          "to": "{address} wallet to transfer the token"
+        }
+      },
+      "transferFrom(address,address,uint256)": {
+        "details": "Transfer and send `amount` tokens from `from` to `to` Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.",
+        "params": {
+          "amount": "{uint256[]} amount to transfer",
+          "from": "{address} wallet from transfer the token",
+          "to": "{address} wallet to transfer the token"
+        }
+      },
+      "transferOwnership(address)": {
+        "params": {
+          "account": "{address} address of the new owner"
+        }
+      },
+      "transfers(uint32,uint32)": {
+        "returns": {
+          "_0": "result {TokenLibrary.Transfer[]} array of register transfers movements"
+        }
+      },
+      "version()": {
+        "returns": {
+          "_0": "TOKEN_VERSION {string} version of the smart contract"
+        }
+      },
+      "withdraw(uint256,address)": {
+        "params": {
+          "amount": "{uint256} the number of tokens transferred",
+          "receiver": "{address} the recipient of the token transfer"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "balanceOf(address)": {
+        "notice": "Returns the amount of tokens owned by `account`."
+      },
+      "burn(address,uint256,uint256)": {
+        "notice": "Remove `amount` tokens from `account` Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+      },
+      "getAddressProxy()": {
+        "notice": "Get address of proxy contract"
+      },
+      "getRules()": {
+        "notice": "Get parameters rules of contract"
+      },
+      "handlePayment(address)": {
+        "notice": "handle payment receive by everyone, everywhere, all at once"
+      },
+      "injectCapital()": {
+        "notice": "Inject wei into smart contract"
+      },
+      "isPaused()": {
+        "notice": "Check if contract is paused or not"
+      },
+      "mint(address,uint256)": {
+        "notice": "Mint and send `amount` tokens to `to` Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+      },
+      "owner()": {
+        "notice": "Returns the address wallet of the smart contract owner."
+      },
+      "pause(uint256)": {
+        "notice": "Pause transfer tokens of smart contract"
+      },
+      "setAddressProxy(address)": {
+        "notice": "Set address of proxy contract to accept only proxy requests"
+      },
+      "setFundraising(uint256,uint256,uint256)": {
+        "notice": "Set fundraising parameters to mint tokens in conditions"
+      },
+      "setRules((bool,bool,bool,uint256,uint256,uint256,uint256))": {
+        "notice": "Set parameters rules of contract only if at start rules is setted modifiable"
+      },
+      "totalSupply()": {
+        "notice": "Returns the amount of tokens in existence."
+      },
+      "transferOwnership(address)": {
+        "notice": "Transfer ownership of the smart contract"
+      },
+      "transfers(uint32,uint32)": {
+        "notice": "Get movements of the assets"
+      },
+      "unpause()": {
+        "notice": "Unpause transfer tokens of smart contract"
+      },
+      "version()": {
+        "notice": "Returns the version of the token contract"
+      },
+      "withdraw(uint256,address)": {
+        "notice": "Withdraw tokens amount of contract balance"
+      }
+    },
+    "version": 1
+  }
+}
